@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- IMAGE SELECTION CODE -->
+<div class="slideshow-container">
+	<div class="mySlides fade">
+	  <div class="numbertext">1 / 3</div>
+	  <img src="image/1.jpg" style="width:100%" >
+	  <div class="text">Caption Text</div>
+	</div>
+
+	<div class="mySlides fade">
+	  <div class="numbertext">2 / 3</div>
+	  <img src="image/2.jpg" style="width:100%">
+	  <div class="text">Caption Two</div>
+	</div>
+
+	<div class="mySlides fade">
+	  <div class="numbertext">3 / 3</div>
+	  <img src="image/3.jpg" style="width:100%">
+	  <div class="text">Caption Three</div>
+	</div>
+<!-- < PREVIOUS								NEXT >  -->
+	<a class="prev" id="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" id="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<!-- DOTED SELECTION PART -->
+<div style="text-align:center">
+  <span class="dot1" id="dot1" onclick="currentSlide(1)" onmousemove="display"></span> 
+  <span class="dot2" id="dot2" onclick="currentSlide(2)"></span> 
+  <span class="dot3" id="dot3" onclick="currentSlide(3)"></span> 
+</div>
+<!-- FIXED MAIN MENUBAR -->
+<div class="navbar" >
+  <a href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+</div>
+<!-- MAIN PAGE PART -->
+<div class="main">
+	<p class="p1">Structural Design Associates Limited (SDAL) is a professional engineering and architectural company providing comprehensive architectural and structural engineering services for residential, industrial and commercial projects. Our company believes in providing designs that are functional and economical, working together with our clients to develop complete
+solutions.
+
+SDAL specializes in delivering offshore architectural and structural design services for concrete, wood and steel structures. Providing quality designs with increasing productivity and predictability distinguishes us from the rest.
+
+SDAL is undertaken with the understanding that our client’s success lies in the creation of functional, economic and, most importantly, safe structures. Knowledge of international industry standards, extensive domain experience and a keen interest for innovation characterizes our team of engineers, giving our clients an edge over others.</p>
+<img src="image/1.jpg" >
+<p>NDUSTRIAL
+We are established consultancy firm for  Architectural and Structural Design.Our design starts with analyzing your land and requirements. we provide design services for Industrial Buildings, Sheds, Pre-Engineered Steel Structures, Industrial Plants, Industrial Stacks, Mills and Many more.
+
+COMMERCIAL
+We believe a sustainable building is good for the planet as well as for the bottom line, and a healthy environment can translate into higher productivity and lower operating costs. Our team is focused on the creation of informal places for encounter to stimulate ideas. Comfort and smart design distinguish our commercial buildings.
+
+POWER PLANT
+We are Bangladesh’s Leading Structural Design and Engineering Service Provider in Industrial sector.We are capable of handling large volume structural design requirements. Our approach to project management is flexible, giving you different options, adding to your convenience.
+
+MEDICAL
+Our approach is clinically driven, enabling enhanced delivery and improving the experience of patients and staff alike.Our work is rooted in the formulation of intelligent strategies to deliver sustainable settings for health improvement.  Our exemplary design enhances the human experience of medical care.
+
+EDUCATIONAL
+Trans-formative learning methodologies, environments and business models are changing how we educate tomorrow’s global citizens. SDAL’s education practice uses our resources, imagination and leadership to engage our clients and shape creative solutions for the most complex educational challenges of our time.
+
+OTHERS
+We also understand every client has unique needs associated with their constructions and architectural projects. For this reason we specifically tailor our services to best serve the client, while bringing the full range of our experience to the project –from technical expertise, collaborative energy, and design innovation.
+
+</p>
+<p>NDUSTRIAL
+We are established consultancy firm for  Architectural and Structural Design.Our design starts with analyzing your land and requirements. we provide design services for Industrial Buildings, Sheds, Pre-Engineered Steel Structures, Industrial Plants, Industrial Stacks, Mills and Many more.
+
+COMMERCIAL
+We believe a sustainable building is good for the planet as well as for the bottom line, and a healthy environment can translate into higher productivity and lower operating costs. Our team is focused on the creation of informal places for encounter to stimulate ideas. Comfort and smart design distinguish our commercial buildings.
+
+POWER PLANT
+We are Bangladesh’s Leading Structural Design and Engineering Service Provider in Industrial sector.We are capable of handling large volume structural design requirements. Our approach to project management is flexible, giving you different options, adding to your convenience.
+
+MEDICAL
+Our approach is clinically driven, enabling enhanced delivery and improving the experience of patients and staff alike.Our work is rooted in the formulation of intelligent strategies to deliver sustainable settings for health improvement.  Our exemplary design enhances the human experience of medical care.
+
+EDUCATIONAL
+Trans-formative learning methodologies, environments and business models are changing how we educate tomorrow’s global citizens. SDAL’s education practice uses our resources, imagination and leadership to engage our clients and shape creative solutions for the most complex educational challenges of our time.
+
+OTHERS
+We also understand every client has unique needs associated with their constructions and architectural projects. For this reason we specifically tailor our services to best serve the client, while bringing the full range of our experience to the project –from technical expertise, collaborative energy, and design innovation.
+
+</p>
+
+
+<h1></h1>
+<h1></h1>
+<h1></h1>
+</div>
+<!-- FOOTER PART -->
+<div class="footer" >
+  <a href="#"><h1>View counter</h1></a>
+</div>
+<!-- JS LOGICAL PART -->
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n==1)
+  {
+	document.getElementById('next').style.background='url("image/2.jpg")';  
+	document.getElementById('prev').style.background='url("image/3.jpg")';
+	document.getElementById('dot1').style.border=" 10px solid rgba(23,23,23,10)";	
+	document.getElementById('dot2').style.border="";
+	document.getElementById('dot3').style.border="";
+ }
+  else if (n==2)
+  {
+	document.getElementById('next').style.background='url("image/3.jpg")';
+	document.getElementById('prev').style.background='url("image/1.jpg")';
+	document.getElementById('dot1').style.border="";
+	document.getElementById('dot2').style.border=" 10px solid rgba(23,23,23,10)";
+	document.getElementById('dot3').style.border="";
+  }
+  else{
+		document.getElementById('next').style.background='url("image/1.jpg")';
+		document.getElementById('prev').style.background='url("image/2.jpg")';
+		document.getElementById('dot1').style.border="";
+		document.getElementById('dot2').style.border="";
+		document.getElementById('dot3').style.border="10px solid rgba(23,23,23,10)";
+  }
+  
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+	
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
